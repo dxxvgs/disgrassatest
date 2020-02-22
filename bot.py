@@ -5,10 +5,10 @@ import tweepy
 text_file = open("palavras.txt", "r")       #Abrimos a lista de palavras
 palavras = text_file.readlines()        #E convertemos numa lista
 
-consumer_secret = "EX2zfdfSHSzRKvaQLwJ4z3a3G"
-consumer_key = "ureW6vCEDZ0C2oEToE32uZblfnuzNsMfhSiKcTUMLxUIF4CYCZ"           #Credencias do twitter dev
-access_token = "1231182976681156608-aNU3Deag8Cpcjh32Z1Jw1WdYg1AGlm"
-access_token_secret = "O6i6LBUZ5MeZsPkGMyHTWjsQYCGnl4D4fhxZgrSwlv258"
+consumer_secret = "ZQXWqJQIVkWK1dqBo9pC2lCZL"
+consumer_key = "idX4ONIe219nSH8yskSe3cWmd42hdH2uXSa0ho74roYhqehgus"           #Credencias do twitter dev
+access_token = "1231182976681156608-u3prRQd3512eBqHYMljpsS44SfGDxp"
+access_token_secret = "h7V7Fa1bNrNtBtTEIAvAKEOVIt9e2b1YSP8q8ch5muCMd"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -16,7 +16,7 @@ api = tweepy.API(auth)          #Logando
 
 numero = int(palavras[0])  #A palavra atual esta salvo no indice 0 da lista
 
-texto = ""
+texto = "text"
 
 if str(palavras[numero])[0] == '0':
     texto = "disgrassa de "+palavras[numero][1].lower()+"... Melhor não deixa quieto"
